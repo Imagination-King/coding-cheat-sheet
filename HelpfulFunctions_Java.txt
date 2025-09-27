@@ -1,0 +1,57 @@
+This will be a compilation of various helpful functions from different classes
+with some information on usage.
+
+Strings
+-print(String s)
+  print s
+-println()
+  prints a new line (could also use "\n")
+-println(String s)
+  print s then a new line
+-printf(String s)
+  prints s with some formatting
+-int Integer.parseInt(String s)
+  converts s to an int
+  similar method available for doubles and floats
+
+Scanner class
+-Scanner input = new Scanner();
+  link an external file for your program to read from
+-Scanner input = new Scanner(System.in);
+  links the keyboard as the "file" to read from
+-input.close()
+  closes the link between the program and the external file
+
+Math class
+not functions, but the Math class also has some
+  helpful constants like Math.E and Math.PI that
+  contain their arithmatic values.
+-int abs(int a)
+  returns absolute value of a
+  also works for doubles, longs, and floats
+-int max(int a, int b)
+  returns larger of the 2 ints
+  also works for doubles, longs, and floats
+  inverse is int min (int a, int b)
+-double sin(double a)
+  returns sine of a (in Radians)
+  similar functions for cosine (cos), tanget (tan),
+  cosecant (asin), secant (acos), and cotanget (atan)
+-double toDegrees(double a)
+  returns Radian measurement converted to Degrees
+  similar function toRadians() goes the other way
+-double exp(double a)
+  returns e^a
+-double log(double a)
+  returns natural log of a
+-double pow(double a, double b)
+  returns a^b
+-long round(double a)
+  returns a rounded to nearest integer
+-double random()
+  returns random number x in range 0 <= x < 1
+  To get a random number between 2 values:
+  Math.random() * (max - min) + min;
+-double sqrt(double a)
+  returns square root of a
+

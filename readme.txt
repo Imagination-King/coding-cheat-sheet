@@ -11,16 +11,25 @@ List of Code Snippets:
 
 JAVA
 Need Java support in VS Code? Go here: https://code.visualstudio.com/docs/java/java-tutorial
--> HelloWorld.java == gotta start somewhere, might as well be the beginning
--> FunWithVars.java == simple demos & explanations for Java's 8 primitives
--> HelpfulFuntions.java == list of some pre-built functions to make life easier
--> UseArgument.java == demonstration of passing arguments to code through CLI
--> Comparisons.java == all you could ever need to know about comparison operations
--> PowersOfTwo.java == simple demo of a loop, prints powers of 2 up to a given number
--> Hate2Love.java == demo for using JOptionPane (pop up text boxes) and editing strings
 
-COMING SOON
--> Bubble Sort == experience with arrays, loops, and if/else
+Basic Demos/Instructions
+-> HelloWorld.java == gotta start somewhere, might as well be the beginning
+-> FunWithVars.java == Java's 8 primitives
+-> HelpfulFuntions.java == list of some pre-built functions to make life easier
+-> UseArgument.java == passing arguments to code through CLI
+-> Comparisons.java == // still need to do at some point
+-> LoopityLoops.java == all the loops
+-> TestGrades.java == 2 dimensional arrays
+-> FormattingStrings.java == printf command
+-> Triangle.java == demo of StdDraw
+-> ConcertA.java == demo of StdAudio
+-> Hate2Love.java == JOptionPane (pop up text boxes)
+
+Examples from the book
+-> Factors.java == print prime factorization
+-> PowersOfTwo.java == lists powers of 2
+-> PrimeSieve.java == counting prime factors
+-> PlayThatTune.java == plays music samples
 
 Universal Tips & Tricks
 - If the programming problem seems too complicated at first, start breaking it down into
@@ -40,3 +49,13 @@ Universal Tips & Tricks
   doesn't need either.
 - Have a chain of "if-else" statements? Try using a "switch" statement. These will need the
   "break" statements though.
+- While these tips use the Java commands, similar features exist for every language
+  - Want to send output to a file instead of the CLI? Use "java ProgramName > [args] fileName"
+    Try pasting this into the terminal: java .\JavaCodeSnippets\HelloWorld.java >data.txt
+  - Similarly, to read data from a file, use "java ProgramName < fileName"
+  - If you have a two way communication between files, use "java Program1 | java Program2"
+    This would be the same as typing "java Program1 > fileName" and "java Program2 < fileName"
+  - Some standard filters (programs that convert standard input to standard output) include sort
+    (java Program | sort) which sorts the output, grep (grep x < Program) which prints every line
+    from the program that contains x, and more (java Program | more) which prints until your
+    screen is full, then waits for you to hit the space bar before printing more

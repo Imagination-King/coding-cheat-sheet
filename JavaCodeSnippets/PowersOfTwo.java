@@ -16,8 +16,7 @@ public class PowersOfTwo {
     
     // Loop runs until power passes user inputted value
     while (power <= n) {
-      // Take note that Math.pow() produces doubles, so I'm just casting value back
-      // into an int
+      // Take note that Math.pow() produces doubles, so I'm just casting value back into an int
       // Not strictly necessary, but only done for readability
       System.out.println("2 to the power of " + power + " = " + ((int) Math.pow(2, power)));
 

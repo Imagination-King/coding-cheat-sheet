@@ -9,8 +9,11 @@ Strings
 -println(String s)
   print s then a new line
 -printf(String s)
-  prints s with some formatting
--int Integer.parseInt(String s)
+  prints s with some formatting (see
+  FormattingStrings.java for more info)
+-replaceFirst(String s, String a)
+  regex search for s, replace first instance with a
+-Integer.parseInt(String s)
   converts s to an int
   similar method available for doubles and floats
 
@@ -23,35 +26,82 @@ Scanner class
   closes the link between the program and the external file
 
 Math class
-not functions, but the Math class also has some
+  not functions, but the Math class also has some
   helpful constants like Math.E and Math.PI that
   contain their arithmatic values.
--int abs(int a)
-  returns absolute value of a
+-abs(int a)
+  returns INT: absolute value of a
   also works for doubles, longs, and floats
--int max(int a, int b)
-  returns larger of the 2 ints
+-exp(double a)
+  returns DOUBLE: e^a
+-log(double a)
+  returns DOUBLE: natural log of a
+-max(int a, int b)
+  returns INT: larger of the 2 ints
   also works for doubles, longs, and floats
   inverse is int min (int a, int b)
--double sin(double a)
-  returns sine of a (in Radians)
-  similar functions for cosine (cos), tanget (tan),
-  cosecant (asin), secant (acos), and cotanget (atan)
--double toDegrees(double a)
-  returns Radian measurement converted to Degrees
-  similar function toRadians() goes the other way
--double exp(double a)
-  returns e^a
--double log(double a)
-  returns natural log of a
--double pow(double a, double b)
-  returns a^b
--long round(double a)
-  returns a rounded to nearest integer
--double random()
-  returns random number x in range 0 <= x < 1
+-pow(double a, double b)
+  returns DOUBLE: a^b
+-random()
+  returns DOUBLE: random number x in range 0 <= x < 1
   To get a random number between 2 values:
   Math.random() * (max - min) + min;
--double sqrt(double a)
-  returns square root of a
+-round(double a)
+  returns LONG: a rounded to nearest integer
+-sin(double a)
+  returns DOUBLE: sine of a (in Radians)
+  similar functions for cosine (cos), tanget (tan),
+  cosecant (asin), secant (acos), and cotanget (atan)
+-sqrt(double a)
+  returns DOUBLE: square root of a
+-toDegrees(double a)
+  returns DOUBLE: Radian measurement converted to Degrees
+  similar function toRadians() goes the other way
 
+StdDraw
+-setCanvasSize(int w, int h)
+-setXscale(double x0, double x1)
+  sets x-axis scale to (x0, x1)
+  leave args blank to reset to unit square
+  setYscale has same functionality
+-setPenRadius(double r)
+  sets pen radius to r
+  leave args empty to reset to .002
+-point(double x, double y)
+  draws a single point at (x,y)
+-line(double x1, double y1, doube x2, double y2)
+  draws a line between points (x1, y1) and (x2, y2)
+-circle(double x, double y, double r)
+  draws a circle centered at (x,y) with radius r
+  optionally rename to filledCircle
+-square(double x, double y, double r)
+  draws a square centered at (x,y) with side length 2r
+  optionally rename to filledSquare
+-rectangle(double x, double y, double s1, double s2)
+  draws a rectangle centered at (x,y) with side lengths 2s1 and 2s2
+  optionally rename to filledRectangle
+-polygon(double[x], double[y])
+  draws a polygon with n sides defined by points defined in the two arrays i.e.
+  point 1 ( x[0], y[0] ), point 2 ( x[1], y[1] ), etc.
+  optionally rename to filledPolygon
+-text(double x, double y, String s)
+  prints s originating at point (x,y)
+-setFont (Font f)
+-setPenColor(Color c)
+  Note: Font and Color are special data types, some are defined as constants in StdDraw
+-enableDoubleBuffering()
+  causes image to be printed in computer memory only,
+  meant to help with performance
+  use show() to transfer drawing to visible canvas
+  use clear(Color c) to fill canvas with color (white if no color is specified)
+-pause (double t)
+  pauses drawing tasks for t milliseconds
+
+StdAudio
+-play(double[] a)
+  plays given sound
+  instead provide String fileName to play from .wav file
+-save(String fileName, double[a])
+  save a[] to .wav file
+-read(String fileName)
+  returns DOUBLE[]: read .wav file back into program 

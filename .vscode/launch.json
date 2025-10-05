@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "InputOutput",
+      "request": "launch",
+      "mainClass": "InputOutput",
+      "projectName": "coding-cheat-sheet_5b060112"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}"
@@ -15,7 +22,7 @@
       "name": "FunWithVars",
       "request": "launch",
       "mainClass": "FunWithVars",
-      "projectName": "cheat-sheet_e926c440",
+      "projectName": "cheat-sheet_e926c440"
     },
     {
       "type": "java",

@@ -1,6 +1,8 @@
 public class LoopityLoops {
   public static void main(String[] args) {
 
+    /* Just need to print the contents of your array? Try Arrays.toString(array)! */
+
     /*
      * Classic for loop: initalize counter (usually at 0), set upper bounds, and
      * then increment. Incrementation can use any mathematical function, including
@@ -30,6 +32,25 @@ public class LoopityLoops {
       }
       System.out.println();
     }
+    System.out.println();
+
+    /*
+     * For-Each Loop: Useful for when you need to read all the values out of an
+     * array or collection (including ArrayLists, maps, etc.).
+     * Note that For-Each loops CANNOT modify an array's contents, only access the
+     * values in read-only mode. If you need to modify the array, you'll have to use
+     * a normal loop.
+     */
+    System.out.println("FOR-EACH LOOP");
+    int[] scores = { 90, 86, 42, 97, 65, 99, 100 };
+    int total = 0;
+    for (int s : scores) {
+      System.out.print(s + " ");
+      total += s;
+    }
+    double average = total / scores.length;
+    System.out.println("\nAVG: " + average);
+    System.out.println();
 
     /*
      * While loop: counter must be initialized before entering the loop, and
@@ -51,7 +72,7 @@ public class LoopityLoops {
      * loop at least once.
      */
     System.out.println("DO-WHILE LOOP");
-     int number = 0;
+    int number = 0;
     do {
       System.out.println("number = " + number);
       number++;
@@ -63,7 +84,7 @@ public class LoopityLoops {
      * commands (works on for or while loops)
      */
     System.out.println("BREAK STATEMENT (ENDS AT 4)");
-     for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++) {
       if (i == 4) // ends at 4
         break;
       System.out.println("i = " + i);
@@ -75,7 +96,7 @@ public class LoopityLoops {
      * effectively skipping the rest of the current go-around
      */
     System.out.println("CONTINE STATEMENT (SKIPS 2)");
-     for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++) {
       if (i == 2) // skips 2
         continue;
       System.out.println("i = " + i);

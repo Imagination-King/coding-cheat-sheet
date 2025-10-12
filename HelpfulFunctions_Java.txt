@@ -1,6 +1,13 @@
 This will be a compilation of various helpful functions from different classes
 with some information on usage.
 
+Arrays
+-toString(int[])
+  returns String
+  quick way to print the contents of an array without loops
+  note: 2D arrays need toString called on each row, otherwise
+  you'll just get the memory addresses instead of the contents
+
 Strings
 -print(String s)
   print s

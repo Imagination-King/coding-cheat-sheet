@@ -1,0 +1,1 @@
+Hey! If you can't compile one of these programs because you're getting a package not found error, cd into JavaCodeSnippets and try again!

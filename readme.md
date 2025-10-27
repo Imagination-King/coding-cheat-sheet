@@ -19,13 +19,14 @@ Folder 1: Basics
 -> Comparisons == compare primitives, Strings, and arrays
 -> LoopityLoops == all the loops
 -> TestGrades == 2 dimensional arrays
--> FormattingStringsa == printf command
 
-Folder 2: 
--> ArrayShuffle == shuffling the content of arrays
+Folder 2: Advanced (I/O and messing with Arrays)
+-> FormattingStringsa == printf command
 -> Triangle == demo of StdDraw
 -> ConcertA == demo of StdAudio
 -> Hate2Love == JOptionPane (pop up text boxes)
+-> ArrayShuffle == shuffling the content of arrays
+-> SortArray == demos of both insertion sort (brute force) and merge sort (linearithmic)
 
 Folder 3: Beyond Main (Methods, Recursion, Data Types)
 -> FactorialDemo == example of recursion
@@ -47,7 +48,6 @@ Code Samples from Book
 -> Luminance == small library to test compatibility of colors
 -> Turtle == turtle drawing library
 -> Spiral == draws recursive spirals using Turtle library
--> SortArray == demos of both insertion sort (brute force) and merge sort (linearithmic)
 -> ST and Lookup == Symbol Table and partner Lookup classes
 
 Universal Tips & Tricks

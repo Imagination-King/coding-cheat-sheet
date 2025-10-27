@@ -11,6 +11,13 @@ Examples based on `Car(String color, String model, int year)`
 - The .hashCode() method returns an int value representing the hash of the object.
 - The .getClass() method will return the name of the class of the object that calls this function.
 
+- .compareTo(Key b): returns an int based on a comparison between the object calling and the parameter object. You can implment this function in any data types you create by simply saying `implements Comparable`. `a.compareTo(b)` should return -1 if a < b, 0 if a == b, and 1 if a <= b. Your .compareTo() functions should also follow these guidelines:
+ - Antisymmetric: if both x <= y and y >= x, then x = y.
+ - Transitive: if both x <= y and y <= z, then x <= z.
+ - Total: either x <= y or y <= x or both.
+
+ - Both the String and Wrapper classes implement this function already
+
 Arrays
 -toString(int[])
 returns String

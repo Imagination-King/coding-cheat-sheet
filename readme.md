@@ -23,11 +23,15 @@ Folder 1: Basics
 
 Folder 2: 
 -> ArrayShuffle == shuffling the content of arrays
--> FactorialDemo == example of recursion
--> Trianglea == demo of StdDraw
+-> Triangle == demo of StdDraw
 -> ConcertA == demo of StdAudio
 -> Hate2Love == JOptionPane (pop up text boxes)
--> TimeOfDay == an interface and 2 data types that inherit some methods from it, meant to showcase creation of data types and inheritance
+
+Folder 3: Beyond Main (Methods, Recursion, Data Types)
+-> FactorialDemo == example of recursion
+-> TimeOfDay == an interface and 2 data types, meant to showcase creation of data types and inheritance
+-> DataStructuresDemo == demos for single linked lists, stacks, and queues
+-> BSTDemo == demo of a BinarySearchTree
 
 Alexandria (Personal Library)
 -> FunctionalArrays == demonstration of methods / functions with arrays
@@ -43,6 +47,8 @@ Code Samples from Book
 -> Luminance == small library to test compatibility of colors
 -> Turtle == turtle drawing library
 -> Spiral == draws recursive spirals using Turtle library
+-> SortArray == demos of both insertion sort (brute force) and merge sort (linearithmic)
+-> ST and Lookup == Symbol Table and partner Lookup classes
 
 Universal Tips & Tricks
 - If the programming problem seems too complicated at first, start breaking it down into bite-sized chunks. Even the complex problems can be solved with the right combination of basic boolean logic and well-placed loops.
@@ -79,7 +85,12 @@ Universal Tips & Tricks
   The {4, 5, 6} array still exists in memory, but there is now no way to access it because we reassigned its pointer to look at the {1, 2, 3} array. Some languages (like Java) don't care if you do this, they'll gladly overwrite orphaned data, but not every language (like C and C++) will, so watch out!
 - MUTABLE data types are designed so that they hold a series of changing values, like arrays.
 - IMMUTABLE data types are designed so that the values they hold won't change, like Strings. This isn't to say they can't be changed, rather any "changes" are actually more akin to a "replacement."
-- If you truly never want a data value to change, use the keyword `final`. Once a `final` variable is given a value, it can never change, accidentally or otherwise (unless you attempt to use `final` on a mutable data type or a reference type, like an array).
+  - If you truly never want a data value to change, use the keyword `final`. Once a `final` variable is given a value, it can never change, accidentally or otherwise (unless you attempt to use `final` on a mutable data type or a reference type, like an array).
+- EFFICIENCY: you can think about making the program efficient, but don't waste time optimizing it before it's even completed. However, be aware that efficient answers may be better and easier to implement than brute force answers.
+- SYMBOL TABLES: tables made of key-value pairs that have a wide range of usage in both the digital and real worlds
+  - Key: a simple unique value (often a String or int) used to represent the location of a piece of data
+  - Value: the data value represented by the key
+    - Examples of key-value pairs are Names and Phone Numbers in a phone book, Words and Definitions in a dictionary, URLs and Websites on the internet, or even File Names and Files on a computer
 
 - While these tips use the Java commands, similar features exist for every language
   - Want to send output to a file instead of the CLI? Use `java ProgramName > [args] fileName`

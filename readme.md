@@ -11,6 +11,9 @@ Need some Markdown help? [text](https://www.markdownguide.org/basic-syntax/)
 JAVA
 Need Java support in VS Code? Go here: https://code.visualstudio.com/docs/java/java-tutorial
 
+REGEX
+Geared towards use in JS, but useful for any regex building: https://regexr.com
+
 Basic Demos/Instructions
 Folder 1: Basics
 -> HelloWorld == gotta start somewhere, might as well be the beginning
@@ -20,8 +23,9 @@ Folder 1: Basics
 -> LoopityLoops == all the loops
 -> TestGrades == 2 dimensional arrays
 
-Folder 2: Advanced (I/O and messing with Arrays)
+Folder 2: Advanced
 -> FormattingStringsa == printf command
+-> RegexFinder == sample regular expressions
 -> Triangle == demo of StdDraw
 -> ConcertA == demo of StdAudio
 -> Hate2Love == JOptionPane (pop up text boxes)
@@ -91,6 +95,19 @@ Universal Tips & Tricks
   - Key: a simple unique value (often a String or int) used to represent the location of a piece of data
   - Value: the data value represented by the key
     - Examples of key-value pairs are Names and Phone Numbers in a phone book, Words and Definitions in a dictionary, URLs and Websites on the internet, or even File Names and Files on a computer
+- FORMAL LANGUAGES (examples use the Binary language)
+  - ALPHABET: finite set of symbols (0, 1)
+  - STRING: finite sequence of alphabet symbols (01110)
+  - FORMAL LANGUAGE: possibly infinite sets of strings for a given alphabet (0, 1, 10, 11, 100, etc.)
+  - SPECIFICATION PROBLEM: how do we COMPLETELY and PRECISELY define a formal language? With an informal English definition, a regular expression, or something else entirely? (all binary numbers; `(0|1)*`)
+  - RECOGNITION PROBLEM: determining whether or not a given string exists in a given language (1001 is, but 32 isn't)
+  - REGULAR LANGUAGE: any language that can be defined with a regular expression (not every formal language is a regular language, but every regular language is a formal language)
+- DFA: stands for deterministic finite-state automata, a model of a computer made of a set number of states (either yes or no), a set of transitions dictating movement between the different states (based on input values), and a "tape reader" capable of reading input
+- NFA: stands for nondeterministic finite-state automata, similar to DFA, except that each state can have transitions that rely on the same input value, or null transitions that can be followed anytime. In practice, the machine uses recursion to test every possible route it could take based on the input.
+- KLEENE'S THEOREM: REs, DFAs, and NFAs are equivalent models, in the sense that they all characterize regular languages
+- TURING MACHINES: abbreviated TM, advanced version of an NFA, can read both left and right on a tape (which is now an infinite tape with # representing blank spots), can also now write to to the tape
+  - There are visual representations of each of these 3 "machines" in the Extras folder
+  - Speaking of Alan Turing, (re)watch The Imitation Game starring Benedict Cumberbatch. It's really good.
 
 - While these tips use the Java commands, similar features exist for every language
   - Want to send output to a file instead of the CLI? Use `java ProgramName > [args] fileName`

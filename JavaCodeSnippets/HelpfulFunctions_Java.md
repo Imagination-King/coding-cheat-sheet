@@ -1,9 +1,12 @@
-This will be a compilation of various helpful functions from different classes
-with some information on usage.
+# Helpful Functions
 
-Universal Functions
+Information about various functions that get used frequently enough that they deserved their own cheat sheet.
+
+## Universal Functions
+
 There's a couple of functions found in the API of every single object (including Strings and arrays) coded in Java. This is because every object in Java is a descendant of the Object class. Their implementations vary based on the object, but their roles stay the same.
 Examples based on `Car(String color, String model, int year)`
+
 - The .toString() method is often used as a quick debugging tool to show what values are currently stored in the object. For example, the Arrays' toString puts the contents of an array into a nice, compact String. And yes, even the String data type has a .toString() method, though you'll rarely, if ever, need it, as it just returns the String itself.
   - Car.toString() might print out "Year: `year` Color: `color` Model: `model`"
 - The .equals(Object obj) function takes the place of the == operator, since that operator only compares the reference values of objects instead of the objects themselves. The equals() method would be used to go in and compare the actual values stored in the object.
@@ -11,21 +14,26 @@ Examples based on `Car(String color, String model, int year)`
 - The .hashCode() method returns an int value representing the hash of the object.
 - The .getClass() method will return the name of the class of the object that calls this function.
 
-- .compareTo(Key b): returns an int based on a comparison between the object calling and the parameter object. You can implment this function in any data types you create by simply saying `implements Comparable`. `a.compareTo(b)` should return -1 if a < b, 0 if a == b, and 1 if a <= b. Your .compareTo() functions should also follow these guidelines:
- - Antisymmetric: if both x <= y and y >= x, then x = y.
- - Transitive: if both x <= y and y <= z, then x <= z.
- - Total: either x <= y or y <= x or both.
+### Comparable (Standard Java interface implemented by many different classes incl. String and the Wrapper classes)
 
- - Both the String and Wrapper classes implement this function already
+- .compareTo(Key b): returns an int based on a comparison between the object calling and the parameter object.
+  **Note on implementing Comparable on your own classes:**
+  - `a.compareTo(b)` should return -1 if a < b, 0 if a == b, and 1 if a <= b.
+  - Your .compareTo() functions should also follow these guidelines:
+    - Antisymmetric: if both x <= y and y >= x, then x = y.
+    - Transitive: if both x <= y and y <= z, then x <= z.
+    - Total: either x <= y or y <= x or both.
 
-Arrays
+## Arrays
+
 -toString(int[])
 returns String
 quick way to print the contents of an array without loops
 note: 2D arrays need toString called on each row, otherwise
 you'll just get the memory addresses instead of the contents
 
-Strings / Printing
+## Strings / Printing
+
 -print(String s)
 print s
 -println()
@@ -41,14 +49,18 @@ regex search for s, replace first instance with a
 returns portion of String starting at i and ending at j-1
 Strings, like arrays, start indexing at 0
 
-Wrappers
+## Wrappers
+
 Each data primitive in Java has a "wrapper" type that allows you to treat the primitive as an object. In addition to granting each primitive access to the universal methods (see above), each wrapper class also has some additional functions. The name of the wrapper class is simply the name of the primitive spelled out, with the first letter being capitalized. (i.e. Integer for int, Boolean for boolean, Character for char, etc.)
+
 - Integer.parseInt(String s)
   converts s to an int
   similar methods available for all numerical primitives
+
 * Note that Java will auto-convert (offcially: box and unbox) primitives to their wrappers and vice-versa whenever it's needed.
 
-Scanner class
+## Scanner class
+
 -Scanner input = new Scanner();
 link an external file for your program to read from
 -Scanner input = new Scanner(System.in);
@@ -56,7 +68,8 @@ links the keyboard as the "file" to read from
 -input.close()
 closes the link between the program and the external file
 
-Math class
+## Math class
+
 not functions, but the Math class also has some
 helpful constants like Math.E and Math.PI that
 contain their arithmatic values.
@@ -89,7 +102,8 @@ returns DOUBLE: square root of a
 returns DOUBLE: Radian measurement converted to Degrees
 similar function toRadians() goes the other way
 
-Color (Object)
+## Color (Object)
+
 -import java.awt.Color
 -Color (int r, int g, int b)
 new color created by mixing specified values of red,
@@ -102,7 +116,8 @@ returns darker version of current color
 returns int value of red intensity
 also has getGreen() and getBlue() variants
 
-StdDraw
+## StdDraw Class (can be found in ExternalLibs folder)
+
 -setCanvasSize(int w, int h)
 -setXscale(double x0, double x1)
 sets x-axis scale to (x0, x1)
@@ -141,7 +156,8 @@ use clear(Color c) to fill canvas with color (white if no color is specified)
 -pause (double t)
 pauses drawing tasks for t milliseconds
 
-StdAudio
+## StdAudio Class (can be found in ExternalLibs folder)
+
 -play(double[] a)
 plays given sound
 instead provide String fileName to play from .wav file
